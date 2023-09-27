@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/first1.css">
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <div class="fir">
+            <hr>
+            <h1>
+                WELCOME<br>TO<br>BOILD EGG'S<br>WEBSITE
+            </h1>
+            <hr>
+        </div>
+        <center>
+            <b>*Press space to continue*</b>
+        </center>
+        <script>
+            document.body.onkeyup = function(e) {
+                if (e.key == " " ||
+                    e.code == "Space" ||
+                    e.keyCode == 32
+                ) {
+                    window.location.href = "intro.html";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>
