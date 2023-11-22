@@ -46,7 +46,7 @@
             let header = document.getElementById("navd");
             let txt = document.getElementById("navp");
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            header.style.opacity = 1.35 - scrollTop / 500;
+            header.style.opacity = 1 - scrollTop / 500;
             if (header.style.opacity <= 0 && txt.textContent.includes('Intro')) {
                 txt.classList.add('ani');
                 setTimeout(function() {
