@@ -1,6 +1,8 @@
 import { Player } from './player.js';
 import { InputHandler } from './input.js';
 window.addEventListener('load', function() {
+    const loading = this.document.getElementById('load');
+    loading.style.display = 'none';
     var can = document.getElementById("l1");
     can.width = document.getElementById("ply").offsetWidth;
     can.height = document.getElementById("ply").offsetHeight;
@@ -25,7 +27,7 @@ window.addEventListener('load', function() {
 
         }
         update() {
-            this.player.update()
+            this.player.update(this.input.keys)
         }
         draw(context) {
             this.player.draw(context);

@@ -66,3 +66,24 @@ canvas {
 #player {
     display: none;
 }
+
+@keyframes tt {
+    from {
+        width: 0;
+    }
+    to {
+        width: 5em;
+    }
+}
+
+#load {
+    position: absolute;
+    top: 75%;
+    right: 10%;
+    width: 4em;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: tt 2s infinite alternate
+}

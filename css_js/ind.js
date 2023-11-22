@@ -37,9 +37,9 @@ class Bubble {
         if (this.x > can.width + 15) {
             this.x = -32;
         }
-        if (this.y <= 0) {
+        if (this.y <= -20) {
             this.size = 8 + Math.random() * 6;
-            this.y = can.height;
+            this.y = can.height + 15;
             this.x = Math.random() * can.width - 1;
             this.color = 'rgb(255,255,255,0.5)';
         }
@@ -61,6 +61,7 @@ class Bubble {
     }
 }
 
+var audio;
 
 function mPop() {
     for (i = 0; i <= 20; i++) {
@@ -68,7 +69,12 @@ function mPop() {
         particlesArray[i].draw();
         if (mouse.y > particlesArray[i].y - particlesArray[i].size && mouse.y < particlesArray[i].y + particlesArray[i].size) {
             if (mouse.x > particlesArray[i].x - particlesArray[i].size && mouse.x < particlesArray[i].x + particlesArray[i].size) {
-                particlesArray[i].color = 'rgba(255,255,255,0)';
+                audio = new Audio('css_js/misc/pop.wav')
+                audio.volume = 0.3;
+                audio.play();
+                particlesArray[i].y = can.height + 20 + Math.random() * 100;
+                particlesArray[i].x = Math.random() * can.width;
+                particlesArray[i].size = 8 + Math.random() * 6;
             }
         }
     }

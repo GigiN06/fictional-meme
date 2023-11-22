@@ -6,6 +6,7 @@ document.body.onkeyup = function(e) {
         window.location.href = "intro.html";
     }
 }
+
 var can = document.querySelector('canvas');
 can.width = window.innerWidth;
 can.height = window.innerHeight;
@@ -24,8 +25,8 @@ const mouse = {
 window.addEventListener('click', function(event) {
     mouse.x = event.x;
     mouse.y = event.y;
-    for (let i = 0; i < 10; i++) {
-        particlesArray.push(new Particle());
+    for (let i = 0; i < 20; i++) {
+        particlesArray.push(new Particle(mouse.x, mouse.y));
     }
 });
 
@@ -33,15 +34,15 @@ window.addEventListener('mousemove', function(event) {
     mouse.x = event.x;
     mouse.y = event.y;
     for (let i = 0; i < 5; i++) {
-        particlesArray.push(new Particle());
+        particlesArray.push(new Particle(mouse.x, mouse.y));
     }
 });
 
 
 class Particle {
-    constructor() {
-        this.x = mouse.x;
-        this.y = mouse.y;
+    constructor(x1, y1) {
+        this.x = x1;
+        this.y = y1;
         //this.x = can.width / 2;
         //this.y = can.height / 2;
         this.size = Math.random() * 15 + 1;
@@ -95,6 +96,7 @@ function handleParticles() {
         }
     }
 }
+var mu = document.getElementById('music')
 
 function animate() {
     //cc.fillStyle = 'rgba(0,0,0,0.1)';
@@ -106,3 +108,20 @@ function animate() {
 }
 init();
 animate();
+var audio;
+mu.addEventListener('click', function() {
+    if (!audio) {
+        audio = new Audio('css_js/misc/fbg.mp3');
+        window.onload = audio.play();
+        audio.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        });
+        window.addEventListener('keypress', e => {
+            if (e.key === 'M' || e.key === 'm') {
+                if (!audio.paused) audio.pause();
+                else audio.play();
+            }
+        })
+    }
+})

@@ -11,26 +11,78 @@
 
 <body>
     <nav>
-        <h1>Intro</h1>
+        <h1 id="navp">Intro</h1>
     </nav>
     <canvas></canvas>
-    <br><br><br><br><br><br>
-    <center>
+    <div class="container">
         <div class="i">
-            <font style="float: left;font-size: 30px;">Good Day User,</font><br><br>Welcome to my website, this a simple website to talk about things I do and the things I like. Hope you don't find it too boring and have a lot of fun with it :) <br><br>
+            <font style="float: left;font-size: 30px;">Good Day User,</font><br><br>Welcome to my website, this a simple website to talk about things I do and the things I like.I hope you have a lot of fun with it :) <br><br>
             <a href="#d1"><input type="button" value="DISCLAIMER"></a>
-            <br><br>
+            <br><br> The theme for this website is based on the old school old pixelated video games because I am a big sucker of that style as you can clearly tell.
         </div>
-
-        <div class="disc" id="d1">
-            <div class="con">This project was made under the pretext of building a portfolio for myself and also to strengthen my skills in web development.This project is more of a passion project.
-                <a href="#"><button class="cls">X</button></a>
+        <div class="partii">
+            <div class="tle" id="navd">
+                <h1>Things I Do and Love</h1>
+            </div>
+            <div class="sinf">
+                <h2>~???~</h2>In this section I have put the things I do and like the most out of the bunch. Well these are my hobbies that I like to do when bored or just to relax <br><br>
+                <a href="#d1"><input type="button" value="Fun Note"></a>
+            </div>
+            <div class="sections">
+                <div onmouseover="art()" onmouseout="def()">ART</div>
+                <div onmouseover="mu()" onmouseout="def()">Music</div>
+                <div onmouseover="ga()" onmouseout="def()">Game</div>
+            </div>
+            <br>
+            <div class="info">
+                <p id="ifo">Hover on the buttons on the left to reveal more info</p>
             </div>
         </div>
-    </center>
-    <button></button> <button></button><button></button><button></button>
+    </div>
     <br>
     <script src="css_js/ind.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            let header = document.getElementById("navd");
+            let txt = document.getElementById("navp");
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            header.style.opacity = 1.35 - scrollTop / 500;
+            if (header.style.opacity <= 0 && txt.textContent.includes('Intro')) {
+                txt.classList.add('ani');
+                setTimeout(function() {
+                    txt.innerText = "Things I Do and Love";
+                    txt.classList.remove('ani')
+                }, 600)
+
+            } else if (header.style.opacity > 0 && txt.textContent.includes('Things I Do and Love')) {
+                txt.classList.add('ani');
+                setTimeout(function() {
+                    txt.innerText = "Intro";
+                    txt.classList.remove('ani')
+                }, 600)
+            }
+        });
+
+        function def() {
+            let text = "Hover on the buttons on the left to reveal more info";
+            document.getElementById("ifo").innerText = text;
+        }
+
+        function art() {
+            let text = "A series of digital artwork I have done throughout my life";
+            document.getElementById("ifo").innerText = text;
+        }
+
+        function mu() {
+            let text = "The genres in music that I like to listen too ";
+            document.getElementById("ifo").innerText = text;
+        }
+
+        function ga() {
+            let text = "Here I talk about my favorite video games I have played";
+            document.getElementById("ifo").innerText = text;
+        }
+    </script>
 </body>
 
 </html>
