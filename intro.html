@@ -17,7 +17,7 @@
     <div class="container">
         <div class="i">
             <font style="float: left;font-size: 30px;">Good Day User,</font><br><br>Welcome to my website, this a simple website to talk about things I do and the things I like.I hope you have a lot of fun with it :) <br><br>
-            <a href="#d1"><input type="button" value="DISCLAIMER"></a>
+            <a href="#d1" onclick="mud()"><input type="button" value="DISCLAIMER"></a>
             <br><br> The theme for this website is based on the old school old pixelated video games because I am a big sucker of that style as you can clearly tell.
         </div>
         <div class="partii">
@@ -26,11 +26,11 @@
             </div>
             <div class="sinf">
                 <h2>~???~</h2>In this section I have put the things I do and like the most out of the bunch. Well these are my hobbies that I like to do when bored or just to relax <br><br>
-                <a href="#d1"><input type="button" value="Fun Note"></a>
+                <input type="button" value="Fun Note" onclick="fun()">
             </div>
             <div class="sections">
-                <div onmouseover="art()" onmouseout="def()">ART</div>
-                <div onmouseover="mu()" onmouseout="def()">Music</div>
+                <div onmouseover="art()" onmouseout="def()" onclick="location.href='art.html';">ART</div>
+                <div onmouseover="mu()" onmouseout="def()" onclick="location.href='music.html';">Music</div>
                 <div onmouseover="ga()" onmouseout="def()">Game</div>
             </div>
             <br>
@@ -41,48 +41,15 @@
     </div>
     <br>
     <script src="css_js/ind.js"></script>
-    <script>
-        window.addEventListener('scroll', function() {
-            let header = document.getElementById("navd");
-            let txt = document.getElementById("navp");
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            header.style.opacity = 1 - scrollTop / 500;
-            if (header.style.opacity <= 0 && txt.textContent.includes('Intro')) {
-                txt.classList.add('ani');
-                setTimeout(function() {
-                    txt.innerText = "Things I Do and Love";
-                    txt.classList.remove('ani')
-                }, 600)
-
-            } else if (header.style.opacity > 0 && txt.textContent.includes('Things I Do and Love')) {
-                txt.classList.add('ani');
-                setTimeout(function() {
-                    txt.innerText = "Intro";
-                    txt.classList.remove('ani')
-                }, 600)
-            }
-        });
-
-        function def() {
-            let text = "Hover on the buttons on the left to reveal more info";
-            document.getElementById("ifo").innerText = text;
-        }
-
-        function art() {
-            let text = "A series of digital artwork I have done throughout my life";
-            document.getElementById("ifo").innerText = text;
-        }
-
-        function mu() {
-            let text = "The genres in music that I like to listen too ";
-            document.getElementById("ifo").innerText = text;
-        }
-
-        function ga() {
-            let text = "Here I talk about my favorite video games I have played";
-            document.getElementById("ifo").innerText = text;
-        }
-    </script>
+    <div class="disc" id="d1">
+        <div class="con">
+            <a href="#123" style="float: right;" onclick="mod()">X</a>
+            <h2>*DISCLAIMER*</h2>
+            <div class="con1">
+                This webpage is fun little project for myself to learn and implement new features.
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

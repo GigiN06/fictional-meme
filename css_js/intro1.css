@@ -11,7 +11,7 @@
 body {
     font-family: 'vis';
     margin: 0px;
-    background-image: linear-gradient(to right, #192655, #3876BF, #3876BF, #192655);
+    background-image: radial-gradient( #3876BF, #20436b, #192655, black);
 }
 
 .container {
@@ -34,7 +34,7 @@ h1.hide {
 }
 
 nav {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), #192655, rgba(0, 0, 0, 1));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), #030c2c, rgba(0, 0, 0, 1));
     padding: 10px;
     opacity: 50%;
     position: fixed;
@@ -97,7 +97,7 @@ input:hover {
 
 .tle {
     padding: 20px;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), #192655, rgba(0, 0, 0, 1));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), #080e27, rgba(0, 0, 0, 1));
     grid-column-start: 1;
     grid-column-end: 3;
     z-index: -1;
@@ -151,6 +151,66 @@ input:hover {
 }
 
 #navp.ani {
+    opacity: 0;
+    transition: all .4s;
+}
+
+.disc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .7s;
+}
+
+.con {
+    border: 8px black double;
+    background-color: white;
+    text-align: center;
+    width: 40%;
+    padding: 5px;
+    transition: all .7s;
+}
+
+.con1 {
+    padding: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all .4s;
+}
+
+a:hover {
+    color: red;
+    transition: all .4s;
+}
+
+.con:has(a:hover) {
+    border: 8px rgb(153, 0, 0) double;
+    background-color: black;
+    color: white;
+    transition: all .7s;
+}
+
+#ifo {
+    padding: 25px;
+    box-shadow: 10px 0 rgba(255, 255, 255, 0.671), 0 10px rgba(255, 255, 255, 0.671), -10px 0 rgba(255, 255, 255, 0.671), 0 -10px rgba(255, 255, 255, 0.671), 20px 0px black, 10px 10px black, 10px -10px black, -20px 0 black, -10px 10px black, -10px -10px black, 0 20px black, 0 -20px black;
+    background-color: white;
+    transition: all .7s;
+    position: relative;
+}
+
+#ifo.anif {
     opacity: 0;
     transition: all .4s;
 }
