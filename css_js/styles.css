@@ -1,0 +1,169 @@
+@font-face {
+    font-family: vis;
+    src: url(font/visitor1.ttf);
+}
+
+body {
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: 'vis';
+    background-color: black;
+}
+
+#a1 {
+    pointer-events: none;
+    opacity: 0.1;
+    transition: all .7s;
+    justify-content: space-around;
+}
+
+img {
+    cursor: pointer;
+}
+
+#mark,
+#bye {
+    cursor: pointer;
+}
+
+div#et1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    padding-top: 100px;
+    overflow: auto;
+    /* background-color: rgb(0, 0, 0); */
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .9s;
+}
+
+div#et2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+span.cl {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+span.cl:hover {
+    color: red;
+    ;
+}
+
+p {
+    text-align: center;
+}
+
+div#win1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 20;
+    left: 0;
+    padding-top: 100px;
+    overflow: auto;
+    animation: 5s bgclr1 alternate infinite;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .9s;
+}
+
+@keyframes bgclr1 {
+    0% {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    25% {
+        background-color: rgba(94, 0, 0, 0.8);
+    }
+    50% {
+        background-color: rgba(93, 87, 0, 0.8);
+    }
+    75% {
+        background-color: rgba(5, 93, 0, 0.8);
+    }
+    100% {
+        background-color: rgba(0, 89, 93, 0.8);
+    }
+}
+
+div#win2 {
+    animation: bgcl2 alternate infinite 5s;
+    margin: auto;
+    padding: 20px;
+    color: black;
+    font-size: larger;
+    width: 40%;
+    border: black 5px solid;
+}
+
+@keyframes bgcl2 {
+    0% {
+        background-color: rgb(255, 255, 255);
+    }
+    25% {
+        background-color: rgb(0, 94, 94);
+    }
+    50% {
+        background-color: rgb(0, 6, 93);
+    }
+    75% {
+        background-color: rgb(88, 0, 93);
+    }
+    100% {
+        background-color: rgb(93, 4, 0);
+    }
+}
+
+.ppp {
+    animation: pp 1s linear infinite;
+}
+
+@keyframes pp {
+    0% {
+        color: yellow;
+    }
+    10% {
+        color: blue;
+    }
+    35% {
+        color: yellow;
+    }
+    45% {
+        color: green;
+    }
+    70% {
+        color: yellow;
+    }
+    80% {
+        color: red;
+    }
+    100% {
+        color: yellow;
+    }
+}
+
+#notif {
+    position: fixed;
+    animation: pp 1s linear infinite;
+    font-size: 40px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s;
+}
