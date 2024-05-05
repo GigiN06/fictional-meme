@@ -1,0 +1,331 @@
+@font-face {
+    font-family: vis;
+    src: url(font/8bitlimr.ttf);
+}
+
+@font-face {
+    font-family: ppc;
+    src: url(font/rg.ttf);
+}
+
+nav {
+    background-color: white;
+    border: 5px black solid;
+    padding: 10px;
+    opacity: 30%;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: black;
+    top: 0;
+    transition: .4s;
+}
+
+nav:hover {
+    opacity: 100%;
+    transition: .7s;
+}
+
+body {
+    background-color: rgb(73, 73, 73);
+    font-family: ppc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    margin-top: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
+    background-color: white;
+    border: 5px black solid;
+    color: black;
+    padding: 20px;
+    justify-content: center;
+    align-self: center;
+    gap: 150px;
+    height: 1000px
+}
+
+.pixel,
+.pp {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+}
+
+.pixd,
+.ppd {
+    grid-column-start: 3;
+    align-self: center;
+    width: 50%;
+}
+
+#p2,
+#n2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 16px;
+    background-color: white;
+    width: 320px;
+    height: 180px;
+    transition: all .8s;
+}
+
+#p2 {
+    box-shadow: 0 10px white, 5px 5px white, -5px 5px white, 10px 0 white, -10px 0 white, 0 -10px white, 5px -5px white, -5px -5px white, 0 15px black, 10px 10px black, -5px 10px black, -10px 5px black, 10px 5px black, 15px 0 black, -15px 0 black, 0 -15px black, 5px -10px black, -5px -10px black, 10px -5px black, -10px -5px black;
+}
+
+#p2.pixhov {
+    color: white;
+    background-color: black;
+    justify-content: center;
+    transition: all .8s;
+}
+
+h1.pxt {
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    padding: 5px;
+    box-shadow: 30px 0 black, -30px 0 black, 0 30px black, 0 -30px black, 20px 10px black, -20px 10px black, 20px -10px black, -20px -10px black, 10px 20px black, -10px 20px black, 10px -20px black, -10px -20px black;
+    transition: ease-in-out 1.5s;
+}
+
+h1.pxthov {
+    color: white;
+    background-position: left bottom;
+    animation: shake 0.7s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+#n2 {
+    color: black;
+    box-shadow: 0 10px white, 5px 5px white, -5px 5px white, 10px 0 white, -10px 0 white, 0 -10px white, 5px -5px white, -5px -5px white, 0 15px black, 10px 10px black, -5px 10px black, -10px 5px black, 10px 5px black, 15px 0 black, -15px 0 black, 0 -15px black, 5px -10px black, -5px -10px black, 10px -5px black, -10px -5px black;
+}
+
+#n2.nmhov {
+    color: white;
+    background-color: black;
+    transition: all .8s;
+}
+
+.ppd {
+    justify-self: center;
+}
+
+h1.nmt {
+    width: 240px;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    padding: 5px;
+    background: linear-gradient(to right, black 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 2s;
+    border: 5px solid black;
+}
+
+h1.nmt:hover {
+    border: 5px solid black;
+    background-position: left bottom;
+    animation: nmta 2.5s linear forwards;
+}
+
+h1.nmt:not(:hover) {
+    animation: nmta2 1s linear forwards
+}
+
+@keyframes nmta2 {
+    from {
+        border: 5px solid white;
+    }
+    to {
+        border: 5px solid black;
+    }
+}
+
+@keyframes nmta {
+    from {}
+    to {
+        color: white;
+    }
+}
+
+.fskt {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.fk {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px;
+    border: 5px solid black;
+    background-color: white;
+}
+
+.fk:hover {
+    animation: 1s tt forwards;
+}
+
+.fk:not(:hover) {
+    animation: 1s tt2 forwards;
+}
+
+@keyframes tt {
+    from {
+        color: transparent;
+    }
+    to {
+        color: black;
+    }
+}
+
+@keyframes tt2 {
+    from {
+        color: black;
+    }
+    to {
+        color: transparent;
+    }
+}
+
+.m {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: opacity .7s;
+}
+
+.c {
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    border: 8px black double;
+    background-color: white;
+    text-align: center;
+    width: 40%;
+    height: 300px;
+    padding: 5px;
+    transition: all .5s;
+}
+
+button {
+    display: flex;
+    grid-column-start: 3;
+    justify-self: end;
+    font-size: 20px;
+    font-family: 'vis';
+    background-color: transparent;
+    border: transparent 2px solid;
+    transition: color .4s;
+}
+
+button:hover {
+    color: red;
+    transition: color .4s;
+}
+
+.c:has(button:hover) {
+    border: 8px rgb(153, 0, 0) double;
+    background-color: black;
+    color: white;
+    transition: all .7s;
+}
+
+h2 {
+    display: flex;
+    align-self: start;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    transition: all .6s;
+    justify-self: start;
+}
+
+.img {
+    display: flex;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    justify-content: center;
+}
+
+.c2 {
+    align-self: end;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    transition: all .8s;
+}
+
+#mov,
+#mov1 {
+    transition: all .8s;
+}

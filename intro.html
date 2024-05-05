@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <script>
+        window.addEventListener('keyup', e => {
+            if (e.key === 'Backspace')
+                window.location.href = "index.html";
+        })
+    </script>
     <nav>
         <h1 id="navp">Intro</h1>
     </nav>
@@ -31,7 +37,7 @@
             <div class="sections">
                 <div onmouseover="art()" onmouseout="def()" onclick="location.href='art.html';">ART</div>
                 <div onmouseover="mu()" onmouseout="def()" onclick="location.href='music.html';">Music</div>
-                <div onmouseover="ga()" onmouseout="def()">Game</div>
+                <div onmouseover="ga()" onmouseout="def()" onclick="location.href='about.html';">About</div>
             </div>
             <br>
             <div class="info">
@@ -46,7 +52,7 @@
             <a href="#123" style="float: right;" onclick="mod()">X</a>
             <h2>*DISCLAIMER*</h2>
             <div class="con1">
-                This webpage is fun little project for myself to learn and implement new features.
+                Use backspace to go back to previous pages because im too lazy to add a navigation thingy on this page :)
             </div>
         </div>
     </div>

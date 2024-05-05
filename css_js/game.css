@@ -1,0 +1,25 @@
+@font-face {
+    font-family: vis;
+    src: url(font/8bitlimr.ttf);
+}
+
+@font-face {
+    font-family: ppc;
+    src: url(font/rg.ttf);
+}
+
+body {
+    font-family: 'vis';
+    margin: 0;
+}
+
+canvas {
+    background-color: black;
+    position: fixed;
+}
+
+#idl,
+#rt,
+#lt {
+    z-index: 10;
+}
