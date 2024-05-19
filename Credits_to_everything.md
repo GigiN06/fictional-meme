@@ -4,13 +4,13 @@ Credits
  
    +Music from the game Irisu Syndrome
    
-    Name: Zero Incoming - https://www.youtube.com/watch?v=EJy2-cysNSA&list=PLcSmr4zYz7hY-CGAxfabw3Dk9v313BT8X&index=7
+   Name: Zero Incoming - https://www.youtube.com/watch?v=EJy2-cysNSA&list=PLcSmr4zYz7hY-CGAxfabw3Dk9v313BT8X&index=7
     
  Intro Page:
  
    +Music from the game Castle Crashers
     
-    Name: Orange's Kiss - https://www.youtube.com/watch?v=SrS-0ZrwFQM
+   Name: Orange's Kiss - https://www.youtube.com/watch?v=SrS-0ZrwFQM
  
  Music Page:
  
