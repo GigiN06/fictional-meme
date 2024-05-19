@@ -13,3 +13,5 @@ Credits
    +Art taken from the game The room tribute by Tom Fulp 
    +All Songs are from the same game - https://www.youtube.com/playlist?list=PLUdlcoZWyY8ZlqCLOk9vvcFvuLDJa2FCN
 Rest of the Art was made by me :)
+This was mad while learning the concepts of front end development
+
