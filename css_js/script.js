@@ -1,4 +1,4 @@
-var al = document.getElementById("a1");
+rvar al = document.getElementById("a1");
 var fc = document.getElementById("face");
 var est = 0;
 var sh1 = document.getElementsByClassName("s1"),
@@ -96,7 +96,7 @@ document.addEventListener('click', function(event) {
         })
         al.classList.add('ppp')
 
-        al.innerHTML = "You have collected all the hidden items<br>*Press space to collect reward*"
+        al.innerHTML = "You have collected all the hidden items<br>*Press enter to collect reward*"
         window.addEventListener('keyup', e => {
 
             if (e.key === 'Enter') weiner();
