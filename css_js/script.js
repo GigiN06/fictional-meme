@@ -1,4 +1,4 @@
-rvar al = document.getElementById("a1");
+var al = document.getElementById("a1");
 var fc = document.getElementById("face");
 var est = 0;
 var sh1 = document.getElementsByClassName("s1"),
